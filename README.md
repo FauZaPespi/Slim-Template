@@ -27,6 +27,15 @@ For more help you should check the wiki of the repository, it's completed with s
 
 ### Quick Start with Docker
 
+Copy the `.env.example` into `.env` and update the environnement configuration for your project.
+
+```dotenv
+APP_NAME=slimTemplate
+APP_PORT=8080
+```
+
+Then, start your project:
+
 ```bash
 # Clone the repository
 git clone <your-repo-url>
