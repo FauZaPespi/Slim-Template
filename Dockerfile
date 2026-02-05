@@ -1,4 +1,4 @@
-FROM php:8.2-fpm
+FROM php:8.5-fpm
 
 # Installation des dépendances système (git et zip sont requis pour Composer)
 RUN apt-get update && apt-get install -y \
