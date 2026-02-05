@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: slim_php
+    container_name: ${APP_NAME}_php
     volumes:
       - .:/var/www/html
     networks:
@@ -13,7 +13,7 @@ services:
   # Service Nginx (Le serveur web)
   web:
     image: nginx:alpine
-    container_name: slim_nginx
+    container_name: ${APP_NAME}_nginx
     ports:
       - "${APP_PORT:-8000}:80"
     volumes:
@@ -26,4 +26,5 @@ services:
 
 networks:
   app_network:
+    name: ${APP_NAME}_network
     driver: bridge
