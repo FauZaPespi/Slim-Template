@@ -12,5 +12,8 @@ $app = AppFactory::create();
 // 3. Routing
 require_once '../config/web-routes.php';
 
+$app->addRoutingMiddleware();
+$app->addErrorMiddleware(true, true, true); // Deactivate this in production to not expose errors in public
+
 // 4. On lance l'application
 $app->run();

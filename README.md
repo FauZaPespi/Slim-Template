@@ -40,7 +40,18 @@ Then, start your project:
 # Clone the repository
 git clone <your-repo-url>
 cd Slim-Template
+```
 
+Create a **.env** file and paste the following environment variables. They are necessary because **Docker** relies on them.
+
+```dotenv
+APP_NAME=slimTemplate
+APP_PORT=8080
+```
+
+Then, start your project:
+
+```bash
 # Start Docker containers
 docker-compose up -d
 
@@ -58,3 +69,8 @@ This template is under the Palms license.
 ## Credits
 
 Created by FauZaPespi - Best template of all time!
+
+### Contributors
+
+- FauZaPespi
+- Res-NeoTech
